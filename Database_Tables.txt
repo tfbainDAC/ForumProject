@@ -1,0 +1,14 @@
+CREATE TABLE Fposts(postID int not null auto_increment primary key,
+                   title varchar(30),
+                   content varchar(100),
+                   userid int,
+                   date date)ENGINE InnoDB;
+
+CREATE TABLE Fusers(id int not null primary key,
+                    username varchar(30)) ENGINE InnoDB;
+					
+CREATE TABLE Freply(replyID int not null auto_increment primary key, 
+                    postId int, 
+					userID int, 
+					replyContent varchar(100),
+                    replyDate date	)ENGINE InnoDB;					
