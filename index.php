@@ -8,7 +8,7 @@ require_once('includes/connection.php');
     // get rows affected
     $OK = $query->rowCount();
     $count = 0;
-    if($OK > 1) {
+    if($OK > 0) { 
         $result = $query->fetchall();
         foreach($result as $row) {
             $postID[$count] = $row['postID'];
